@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquimix - Complemento Alimenticio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #4c5b41, #2b3129);
+            color: #fefefe;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #1d1c1c, #ffffff);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            background: #000000;
+            color: #fefefe;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.4s ease, background 0.4s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Sección general */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+
+        /* Contenedor de producto */
+        .product-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .product-image,
+        video {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-info {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style: disc;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #000000;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <!-- Audio de fondo con botón para activar -->
+    <audio id="background-audio" loop>
+        <source src="natu.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio HTML5.
+    </audio>
+    <button onclick="toggleAudio()" style="position: fixed; top: 10px; right: 10px; padding: 10px; background: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+        ACTIVA EL AUDIO
+    </button>
+
+    <header class="header">
+        <div class="banner" data-aos="fade-down">
+            <h1>AQUIMIX-COMPLEMENTO ALIMENTICIO</h1> 
+            <img src="aqui3.jpg" alt="Guásima" class="product-image" data-aos="zoom-in">
+            <p>NUTRICION Y SOSTENIBILIDAD DESDE LA HUASTECA</p>
+            <a href="#acerca" class="btn">CONOCE MAS ACERCA</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2 Sección Acerca del Proyecto -->
+        <section id="acerca" class="about">
+            <h2 data-aos="fade-up">ACERCA DE AQUIMIX</h2>
+            <img src="barra.jpg" alt="Guásima" class="product-image" data-aos="zoom-in">
+            <p data-aos="fade-right">
+                Aquimix es un complemento alimenticio innovador elaborado con Guazuma ulmifolia (aquiche), rico en fibra y antioxidantes, que mejora la nutrición y apoya la economía local en la región Huasteca.
+            </p>
+
+            <p data-aos="fade-right">
+                Misión: Ofrecer una solución accesible y sostenible para mejorar la alimentación y economía de comunidades vulnerables.
+            </p>
+
+            <p data-aos="fade-right">
+                Visión: Ser un referente en el desarrollo de productos alimenticios sostenibles.
+            </p>
+
+        </section>
+
+        <!-- 3 Sección Nuestro Producto -->
+        <section id="producto" class="product">
+            <h2 data-aos="fade-up">PROBLEMA QUE RESUELVE</h2>
+            <div class="product-content">
+                <img src="harina.jpg" alt="Guásima" class="product-image" data-aos="zoom-in">
+                <div class="product-info" data-aos="fade-left">
+                    <p><strong>¿POR QUE ES IMPORTANTE?</strong></p>
+                    <p>Problema identificado:</p>
+                    <ul>
+                        <li>En la Huasteca, el 43.3% de la población vive en pobreza y enfrenta inseguridad alimentaria.</li>
+                    </ul>
+
+                    <p>Solución propuesta:</p>
+                    <ul>
+                        <li>Aprovechamos el aquiche, un recurso subutilizado, para mejorar la calidad nutricional y fomentar el empleo local.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 Sección Nuestro Producto - Versión Invertida -->
+        <section id="producto-derecha" class="product">
+            <h2 data-aos="fade-up">NUESTRO PRODUCTO</h2>
+            <div class="product-content" style="flex-direction: row-reverse;">
+                <video autoplay loop muted data-aos="zoom-in">
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+                <div class="product-info" data-aos="fade-right">
+                    <p><strong>CARACTERISTICAS DEL PRODUCTO</strong></p>
+                    <p>Descripción del proceso:</p>
+                    <ul>
+                        <li>Recolección, limpieza y secado del aquiche.</li>
+                        <li>Transformación en harina.</li>
+                        <li>Formulación de una barra nutritiva con cacahuate y piloncillo.</li>
+                    </ul>
+
+                    <p>Beneficios del producto:</p>
+                    <ul>
+                        <li>Rico en fibra y antioxidantes.</li>
+                        <li>Genera empleos en la región.</li>
+                        <li>Promueve el consumo responsable y sostenible.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Sección Resultados del Proyecto -->
+        <section id="producto" class="product">
+            <h2 data-aos="fade-up">RESULTADOS DEL PROYECTO</h2>
+            <div class="product-content">
+                <video autoplay loop muted data-aos="zoom-in">
+                    <source src="vid.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+                <div class="product-info" data-aos="fade-left">
+                    <p><strong>IMPACTO DEL PROYECTO</strong></p>
+                    <p>Beneficios alcanzados:</p>
+                    <ul>
+                        <li>Generación de empleos locales.</li>
+                        <li>Incremento en la ingesta de fibra y antioxidantes.</li>
+                        <li>Contribución a los Objetivos de Desarrollo Sostenible (ODS 2, 8, 12, 15).</li>
+                    </ul>
+
+                    <p>Limitaciones encontradas:</p>
+                    <ul>
+                        <li>Escala reducida de producción debido a infraestructura limitada.</li>
+                    </ul>
+
+                    <p>Recomendaciones futuras:</p>
+                    <ul>
+                        <li>Ampliar el alcance geográfico y temporal.</li>
+                        <li>Optimizar la formulación para mejorar sabor y textura.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 Equipo del Proyecto - Versión Invertida -->
+        <section id="producto-derecha" class="product">
+            <h2 data-aos="fade-up">EQUIPO DEL PROYECTO</h2>
+            <div class="product-content" style="flex-direction: row-reverse;">
+                <img src="foto3.jpg" alt="Guásima" class="product-image" data-aos="zoom-in">
+                <div class="product-info" data-aos="fade-right">
+                    <p><strong>CONOCE AL EQUIPO</strong></p>
+                    <p>Autores del proyecto:</p>
+                    <ul>
+                        <li>Diana Laura Morales Castillo.</li>
+                        <li>Ximena Moya Martínez.</li>
+                        <li>Fernanda Martínez Chávez.</li>
+                    </ul>
+
+                    <p>Asesor:</p>
+                    <ul>
+                        <li>Cuitláhuac Mojica Mesinas.</li>
+                    </ul>
+
+                    <p>TECNM-CIUDAD VALLES</p>
+                    
+                    <footer class="footer">
+                        <p>&copy; 2024 AQUIMIX.</p>
+                        <p>
+                            Síguenos en nuestras redes sociales: 
+                            <a href="https://www.facebook.com/profile.php?id=61569688343872&mibextid=ZbWKwL" 
+                               target="_blank" 
+                               style="color: #2f4d2b; text-decoration: none;">
+                                Facebook
+                            </a>
+                        </p>
+                    </footer>
+                    
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 AQUIMIX. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+        });
+
+        // Función para activar/desactivar el audio
+        function toggleAudio() {
+            const audio = document.getElementById('background-audio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
